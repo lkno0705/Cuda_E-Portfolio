@@ -63,10 +63,10 @@ RM = /home/leon/clion-2021.1/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/leon/Documents/MatrixAddition
+CMAKE_SOURCE_DIR = /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/leon/Documents/MatrixAddition/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/MatrixAddition.dir/clean
 CMakeFiles/MatrixAddition.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MatrixAddition.dir/build.make CMakeFiles/MatrixAddition.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MatrixAddition.dir/build.make CMakeFiles/MatrixAddition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leon/Documents/MatrixAddition/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target MatrixAddition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target MatrixAddition"
 .PHONY : CMakeFiles/MatrixAddition.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MatrixAddition.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leon/Documents/MatrixAddition/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MatrixAddition.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leon/Documents/MatrixAddition/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/MatrixAddition.dir/rule
 
 # Convenience name for target.

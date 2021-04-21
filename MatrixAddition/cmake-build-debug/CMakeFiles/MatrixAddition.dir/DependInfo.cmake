@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CUDA
-  "/home/leon/Documents/MatrixAddition/main.cu" "/home/leon/Documents/MatrixAddition/cmake-build-debug/CMakeFiles/MatrixAddition.dir/main.cu.o"
+  "/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/main.cu" "/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug/CMakeFiles/MatrixAddition.dir/main.cu.o"
   )
 set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 

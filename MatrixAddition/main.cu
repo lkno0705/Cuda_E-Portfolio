@@ -5,8 +5,9 @@
 const int m = 14400;
 const int n = 14400;
 
+// CUDA Kernel for MatrixAddition
 __global__ void MatAdd(float* A, float* B, float* C) {
-    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    int i = blockIdx.x * blockDim.x + threadIdx.x; // Calculates Current Index
     if(i < m*n)
         C[i] = A[i] + B[i];
 }
@@ -56,13 +57,15 @@ int main() {
 
     std::cout << "[+] Generation on CPU finished \n[+] Duration: " << std::chrono::duration<double>(stop1 - start1).count() << " seconds\n";
 
-    int blockSize = 64;
-    int numBlocks = ((n*m) + blockSize - 1) / blockSize;
+    int blockSize = 64; // Block Size of GPU, 64 for RTX 2070super
+    int numBlocks = ((n*m) + blockSize - 1) / blockSize; // Calculates the number of Blocks
 
+    // Allocate Memory on GPU
     cudaMalloc(&d_A, (m * n) * sizeof(float));
     cudaMalloc(&d_B, (m * n) * sizeof(float));
     cudaMalloc(&d_C, (m * n) * sizeof(float));
 
+    // Copy Data to GPU
     cudaMemcpy(d_A, A, (m * n) * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(d_B, B, (m * n) * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(d_C, C, (m * n) * sizeof(float), cudaMemcpyHostToDevice);
@@ -71,18 +74,23 @@ int main() {
     std::cout << "[+] Calculation started with " << (numBlocks * blockSize) << " Threads";
     auto start = std::chrono::high_resolution_clock::now();
 
+    // Start Kernel
     MatAdd<<<numBlocks, blockSize>>>(d_A, d_B, d_C);
 
+    // Wait for Calculation to finish
     cudaDeviceSynchronize();
     auto stop = std::chrono::high_resolution_clock::now();
 
+    // Copy result to Host
     cudaMemcpy(C, d_C, (m * n) * sizeof(float), cudaMemcpyDeviceToHost);
     std::cout << "\n[+] Multithreaded calculation finished \n[+] Duration: " << std::chrono::duration<double>(stop - start).count() << " seconds";
 
+    // Free Memory on GPU
     cudaFree(d_A);
     cudaFree(d_B);
     cudaFree(d_C);
 
+    // Free memory on host
     delete[] A;
     delete[] B;
     delete[] C;

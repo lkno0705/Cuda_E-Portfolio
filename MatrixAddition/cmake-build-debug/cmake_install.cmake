@@ -1,4 +1,4 @@
-# Install script for directory: /home/leon/Documents/MatrixAddition
+# Install script for directory: /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/leon/Documents/MatrixAddition/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
