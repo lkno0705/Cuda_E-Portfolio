@@ -7,6 +7,12 @@
 #IncludeRegexTransform: 
 
 /mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/main.cu
+cuda_runtime.h
+/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/cuda_runtime.h
+device_launch_parameters.h
+/mnt/406AB8836AB876EE/Documents/Cuda_E-Portfolio/MatrixAddition/device_launch_parameters.h
+stdio.h
+-
 iostream
 -
 chrono
